@@ -23,7 +23,7 @@ function onLinkedInLoad() {
 function onLinkedInAuth() {
     var cpnyID = 2414183; //the Company ID for which we want updates
 
-    IN.API.Raw("/companies/" + cpnyID + "/updates?event-type=status-update&start=0&count=1&format=json").result(displayCompanyUpdates);
+    IN.API.Raw("/companies/" + cpnyID + "/updates?event-type=status-update&start=0&count=10&format=json").result(displayCompanyUpdates);
 
     console.log("After auth");
 
@@ -84,10 +84,16 @@ function displayCompanyUpdates(result) {
             var description = "No description";
 
         }
+        
+        if (isThumbnail) {
+            var thumbnailUrl = isContent.submittedImageUrl;
+        } else {
+            var thumbnailUrl = "http://placehold.it/60x60";
+        }
 
         if (share) {
             
-            var content = "<h4 class='linkedin-feed-post-title'><a href='" + link + "'>" + title + "</a></h4><figure><a href='" + link + "'><img src='' alt='' class='img-responsive'></a></figure><figcaption><p>" + description + "</p></figcaption>";
+            var content = "<h4 class='linkedin-feed-post-title'><a target='_blank' href='" + link + "'>" + title + "</a></h4><figure><a target='_blank' href='" + link + "'><img src='" + thumbnailUrl + "' alt='' class='img-responsive'></a></figure><figcaption><p>" + description + "</p></figcaption>";
 
             el += "<div class='linkedin-feed-post'>" + content + "</div>";
 

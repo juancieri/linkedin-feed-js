@@ -6,7 +6,8 @@ body, html {
   font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: lightgray; }
 
 #nav {
   background: none;
@@ -270,3 +271,24 @@ body {
   #toTop:hover {
     background: black;
     color: white; }
+
+.linkedin-feed-content {
+  position: relative; }
+
+.linkedin-feed-post {
+  background-color: white;
+  margin: 0 0 30px 0;
+  -webkit-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
+  padding: 30px; }
+  .linkedin-feed-post figure {
+    margin: 0 0 30px 0; }
+    .linkedin-feed-post figure a {
+      display: block; }
+    .linkedin-feed-post figure img {
+      margin: 0 auto; }
+
+.linkedin-feed-post-title {
+  margin: 0 0 10px 0;
+  font-weight: 700; }
