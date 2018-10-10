@@ -86,10 +86,8 @@ function displayCompanyUpdates(result) {
         }
 
         if (share) {
-
-            var content = "<a target='_blank' href=" + link + ">" + comment + "</a><br>";
-
-            //el += "<li><img src='" + thumbnailUrl + "' alt=''>" + content + "</li>";
+            
+            var content = "<h4 class='linkedin-feed-post-title'><a href='" + link + "'>" + title + "</a></h4><figure><a href='" + link + "'><img src='' alt='' class='img-responsive'></a></figure><figcaption><p>" + description + "</p></figcaption>";
 
             el += "<div class='linkedin-feed-post'>" + content + "</div>";
 
